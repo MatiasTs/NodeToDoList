@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    background-color: #F4F4F4;
+}
+
+.container{
+    /* background-color: red; */
+    max-width: 50%;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+.titulo{
+    
+    text-align: center;
+    color: rgb(94, 12, 170);
+}
+
+ul{
+    margin-top: 90px;
+    
+}
+
+li{
+    list-style-type: none;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    background-color: white;
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+
+li > p{
+    font-size: 20px;
+    /* color: orange; */
+    margin-left: 40px;
+    display: inline-block;
+    
+}
+
+.boton{
+    margin-right: 20px;
+    padding: 5px 14px;
+    float: right;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.editar{
+    background-color: #87CEEB;
+}
+
+.agregar{
+    background-color: blue;
+    margin-top: 30px;
+    padding: 7px 14px;
+}
+
+.eliminar{
+    background-color: #DC143C;
+}
+
+.boton:hover{
+    cursor: pointer;
+}
+
+.formulario{
+    margin-top: 40px;
+    background-color: #FFFFFF;
+    padding: 20px;
+    width: 70%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.formulario > label{
+    margin-right: 20px;
+    font-size: 18px;
+}
+
+.formulario > input{
+    font-size: 16px;
+    padding: 5px;
+
+}
+
+.button{
+    display: block;
+    padding: 7px 15px;
+    background-color: blue;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.button{
+    cursor: pointer;
+}

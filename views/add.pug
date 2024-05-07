@@ -1,0 +1,9 @@
+extends layout
+block content
+    .container
+        h1.titulo= title
+        form(action="/add" method="POST").formulario
+            label(for="title") Ingresa el título:
+            input(type="text" name="title" id="title")
+            button.button Agregar
+            

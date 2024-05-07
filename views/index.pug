@@ -1,0 +1,12 @@
+extends layout
+block content
+    .container
+        h1.titulo= title
+        a.boton.agregar(href="/add" target="_blank") Agregar Tarea
+        ul
+            each task in tasks
+                li
+                    p= `${task.id}- ${task.title}`
+                    
+                    a.boton.eliminar Eliminar
+                    a.boton.editar Editar
