@@ -25,6 +25,7 @@ app.use(express.urlencoded({extends : false}));
 
 app.get("/", taskController.getAllTasks);
 app.get("/add", taskController.getAddTasks);
+app.post("/add", taskController.addTask);
 
 
 app.listen(PORT, () => {

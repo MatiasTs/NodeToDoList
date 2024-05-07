@@ -2,7 +2,7 @@ extends layout
 block content
     .container
         h1.titulo= title
-        a.boton.agregar(href="/add" target="_blank") Agregar Tarea
+        a.boton.agregar(href="/add") Agregar Tarea
         ul
             each task in tasks
                 li

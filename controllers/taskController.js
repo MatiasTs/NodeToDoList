@@ -14,11 +14,15 @@ const getAddTasks = (req, res) => {
 };
 
 const addTask = (req, res) => {
-    const {title} = body.tarea;
+    const {title} = req.body;
+    let id = tasks.length + 1;
+    tasks.push({id, title, completed:false});
+    res.redirect("/");
 }
 
 
 export default {
     getAllTasks,
-    getAddTasks
+    getAddTasks,
+    addTask
 };
