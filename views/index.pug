@@ -9,4 +9,4 @@ block content
                     p= `${task.id}- ${task.title}`
                     
                     a.boton.eliminar Eliminar
-                    a.boton.editar Editar
+                    a.boton.editar(href=`/edit/${task.id}`) Editar

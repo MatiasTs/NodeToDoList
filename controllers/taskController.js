@@ -20,9 +20,33 @@ const addTask = (req, res) => {
     res.redirect("/");
 }
 
+const getEditTaks = (req, res) => {
+    const id = parseInt(req.params.id);
+    let task = tasks.find(task => task.id === id);
+    if(!task){
+        res.rendirect("/");
+    }else{
+        
+        res.render("edit", {title: "Editar Tareas", task} )
+    }
+}
+
+const editTask = (req, res) => {
+    let id = parseInt(req.params.id);
+    let taskIndex = tasks.findIndex((task) => task.id === id);
+    if(taskIndex === -1){
+        res.redirect("/");
+    }else{
+        tasks[taskIndex].title = req.body.title;
+        res.redirect("/");
+    }
+}
+
 
 export default {
     getAllTasks,
     getAddTasks,
-    addTask
+    addTask,
+    getEditTaks,
+    editTask
 };
