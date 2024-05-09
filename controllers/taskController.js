@@ -42,11 +42,26 @@ const editTask = (req, res) => {
     }
 }
 
+const deleteTask = (req, res) => {
+    const id = parseInt(req.params.id);
+    tasks = tasks.filter((task) => task.id !== id);
+    let newId = 1;
+    tasks = tasks.map(task => {
+        task.id = newId;
+        newId+=1;
+        return task;
+    })
+    
+    res.redirect("/");
+    
+}
+
 
 export default {
     getAllTasks,
     getAddTasks,
     addTask,
     getEditTaks,
-    editTask
+    editTask,
+    deleteTask
 };

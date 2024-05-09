@@ -8,5 +8,5 @@ block content
                 li
                     p= `${task.id}- ${task.title}`
                     
-                    a.boton.eliminar Eliminar
+                    a.boton.eliminar(href=`/delete/${task.id}`) Eliminar
                     a.boton.editar(href=`/edit/${task.id}`) Editar
