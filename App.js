@@ -29,6 +29,7 @@ app.post("/add", taskController.addTask);
 app.get("/edit/:id", taskController.getEditTaks);
 app.post("/edit/:id", taskController.editTask);
 app.get("/delete/:id", taskController.deleteTask);
+app.get("/completed/:id", taskController.completedTask);
 
 
 app.listen(PORT, () => {

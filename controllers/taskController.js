@@ -1,7 +1,7 @@
 
 let tasks = [
     {id:1, title: "Make the TodoList", completed:false},
-    {id:2, title: "Listen English podcast", completed:false},
+    {id:2, title: "Listen English podcast", completed:true},
     {id:3, title: "Lear Node.js and Express", completed:false}
 ];
 
@@ -56,6 +56,20 @@ const deleteTask = (req, res) => {
     
 }
 
+const completedTask = (req, res) => {
+    
+    const id = parseInt(req.params.id);
+    tasks = tasks.map(task => {
+        if(task.id === id){
+
+            (!task.completed) ? task.completed = true : task.completed = false;
+        }
+        return task;
+    });
+
+    res.redirect("/");
+}
+
 
 export default {
     getAllTasks,
@@ -63,5 +77,6 @@ export default {
     addTask,
     getEditTaks,
     editTask,
-    deleteTask
+    deleteTask,
+    completedTask
 };
